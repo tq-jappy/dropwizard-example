@@ -11,9 +11,7 @@ def jdkVersion = '1.7'
 repositories { mavenCentral() }
 
 dependencies {
-    // compile 'com.yammer.dropwizard:dropwizard-core:0.6.2'
     compile 'io.dropwizard:dropwizard-core:0.7.0'
-    compile 'commons-collections:commons-collections:3.2'
     testCompile 'org.codehaus.groovy:groovy-all:2.2.2'
     testCompile 'junit:junit:4.11'
 }
