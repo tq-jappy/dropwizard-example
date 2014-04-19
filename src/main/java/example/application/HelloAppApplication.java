@@ -1,4 +1,4 @@
-package example.service;
+package example.application;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;

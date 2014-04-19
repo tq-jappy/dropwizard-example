@@ -1,6 +1,6 @@
 package example;
 
-import example.service.HelloAppApplication;
+import example.application.HelloAppApplication;
 
 /**
  * 
