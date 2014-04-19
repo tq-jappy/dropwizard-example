@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'groovy'
 apply plugin: 'eclipse'
 
 sourceCompatibility = 1.7
@@ -10,22 +11,23 @@ def jdkVersion = '1.7'
 repositories { mavenCentral() }
 
 dependencies {
-	compile 'com.yammer.dropwizard:dropwizard-core:0.6.2'
-	compile 'commons-collections:commons-collections:3.2'
-	testCompile 'junit:junit:4.11'
+    compile 'com.yammer.dropwizard:dropwizard-core:0.6.2'
+    compile 'commons-collections:commons-collections:3.2'
+    testCompile 'org.codehaus.groovy:groovy-all:2.2.2'
+    testCompile 'junit:junit:4.11'
 }
 
 [compileJava, compileTestJava]*.options*.encoding = defaultEncoding
 
 jar {
-	from (configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }) {
-		exclude 'META-INF/MANIFEST.MF'
-		exclude 'META-INF/*.SF'
-		exclude 'META-INF/*.DSA'
-		exclude 'META-INF/*.RSA'
-	}
-	
-	manifest {
-		attributes 'Main-Class': 'example.Main', 'Implementation-Version': version
-	}
+    from (configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }) {
+        exclude 'META-INF/MANIFEST.MF'
+        exclude 'META-INF/*.SF'
+        exclude 'META-INF/*.DSA'
+        exclude 'META-INF/*.RSA'
+    }
+
+    manifest {
+        attributes 'Main-Class': 'example.Main', 'Implementation-Version': version
+    }
 }
