@@ -2,6 +2,11 @@ template: Hello, %s!
 
 defaultName: Stringer
 
-httpConfiguration:
-  port: 18080
-  adminPort: 18081
+server:
+  applicationConnectors:
+    - type: http
+      port: 18080
+  adminConnectors:
+    - type: http
+      port: 18081
+

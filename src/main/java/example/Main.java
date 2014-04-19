@@ -1,6 +1,6 @@
 package example;
 
-import example.service.HelloAppService;
+import example.service.HelloAppApplication;
 
 /**
  * 
@@ -12,6 +12,6 @@ public class Main {
      * @param args
      */
     public static void main(String... args) throws Exception {
-        new HelloAppService().run(args);
+        new HelloAppApplication().run(args);
     }
 }
