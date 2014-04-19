@@ -3,7 +3,7 @@ dropwizard-example
 
 An example of [Dropwizard](https://dropwizard.github.io/dropwizard/)
 
-- Dropwizard 0.6.2
+- Dropwizard 0.7.0
 - Gradle 1.11
 
 ## Preconditions
