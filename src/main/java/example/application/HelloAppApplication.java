@@ -1,6 +1,7 @@
 package example.application;
 
 import io.dropwizard.Application;
+import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import example.configuration.HelloAppConfiguration;
@@ -22,7 +23,7 @@ public class HelloAppApplication extends Application<HelloAppConfiguration> {
      */
     @Override
     public void initialize(Bootstrap<HelloAppConfiguration> bootstrap) {
-        // nothing to do yet
+        bootstrap.addBundle(new AssetsBundle("/assets", "/app"));
     }
 
     /**

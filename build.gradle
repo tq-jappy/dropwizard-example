@@ -12,6 +12,7 @@ repositories { mavenCentral() }
 
 dependencies {
     compile 'io.dropwizard:dropwizard-core:0.7.0'
+    compile 'io.dropwizard:dropwizard-assets:0.7.0'
     testCompile 'org.codehaus.groovy:groovy-all:2.2.2'
     testCompile 'junit:junit:4.11'
 }
