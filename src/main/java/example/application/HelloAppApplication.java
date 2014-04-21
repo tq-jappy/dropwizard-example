@@ -23,7 +23,8 @@ public class HelloAppApplication extends Application<HelloAppConfiguration> {
      */
     @Override
     public void initialize(Bootstrap<HelloAppConfiguration> bootstrap) {
-        bootstrap.addBundle(new AssetsBundle("/assets", "/app"));
+        bootstrap.addBundle(new AssetsBundle("/assets", "/app", "index.html",
+                "assets"));
     }
 
     /**
