@@ -4,9 +4,14 @@ import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+
+import org.eclipse.jetty.websocket.server.WebSocketHandler;
+import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
+
 import example.configuration.HelloAppConfiguration;
 import example.health.TemplateHealthCheck;
 import example.resource.HelloResource;
+import example.websocket.chat.ChatWebSocket;
 
 public class HelloAppApplication extends Application<HelloAppConfiguration> {
 
@@ -42,5 +47,13 @@ public class HelloAppApplication extends Application<HelloAppConfiguration> {
 
         environment.healthChecks().register("template", healthCheck);
         environment.jersey().register(resource);
+
+        environment.getApplicationContext().setHandler(new WebSocketHandler() {
+
+            @Override
+            public void configure(WebSocketServletFactory factory) {
+                factory.register(ChatWebSocket.class);
+            }
+        });
     }
 }

@@ -3,8 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+    console.log("start");
+    var ws = new WebSocket("ws://localhost:18080/");
+
+    ws.onopen = function(event) {
+        stateChange("opened");
+        ws.send("test");
+    }
+
+    ws.onmessage = function(event) {
+        document.getElementById("log").innerHTML += "<li>" + event.data + "</li>";        
+    }
+
+    ws.onclose = function(event) { stateChange("closed"); }    
+
+    ws.onerror = function(event) { stateChange("error"); }
+
+    function sendMessage() {
+        var msg = document.getElementById("message").value;
+        ws.send(msg);
+    }
+
+    function stateChange(state) {
+        document.getElementById("state").innerHTML = state;
+    }
+</script>
 </head>
 <body>
-hello!
+	<h1>Hello!</h1>
+	<section>
+		<h2>WebSocket</h2>
+		<input id="message" type="text" />
+		<input type="button" value="send" onclick="sendMessage()" />
+		<span id="state"></span>
+		<ul id="log"></ul>
+	</section>
 </body>
 </html>
