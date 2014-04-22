@@ -10,3 +10,6 @@ server:
     - type: http
       port: 18081
 
+logging:
+  loggers:
+    example: DEBUG
