@@ -11,7 +11,6 @@ import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
 import example.configuration.HelloAppConfiguration;
 import example.health.TemplateHealthCheck;
 import example.resource.HelloResource;
-import example.websocket.chat.ChatWebSocket;
 import example.websocket.echo.EchoWebSocket;
 
 public class HelloAppApplication extends Application<HelloAppConfiguration> {
