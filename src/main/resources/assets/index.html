@@ -9,11 +9,10 @@
 
     ws.onopen = function(event) {
         stateChange("opened");
-        ws.send("test");
     }
 
     ws.onmessage = function(event) {
-        document.getElementById("log").innerHTML += "<li>" + event.data + "</li>";        
+        document.getElementById("messages").innerHTML += "<li>" + event.data + "</li>";        
     }
 
     ws.onclose = function(event) { stateChange("closed"); }    
@@ -21,8 +20,9 @@
     ws.onerror = function(event) { stateChange("error"); }
 
     function sendMessage() {
-        var msg = document.getElementById("message").value;
+        var msg = document.getElementById("message").value;        
         ws.send(msg);
+        document.getElementById("message").value = "";
     }
 
     function stateChange(state) {
@@ -33,11 +33,10 @@
 <body>
 	<h1>Hello!</h1>
 	<section>
-		<h2>WebSocket</h2>
 		<input id="message" type="text" />
-		<input type="button" value="send" onclick="sendMessage()" />
+		<input type="button" value="Send" onclick="sendMessage()" />
 		<span id="state"></span>
-		<ul id="log"></ul>
+		<ul id="messages"></ul>
 	</section>
 </body>
 </html>

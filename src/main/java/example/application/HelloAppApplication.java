@@ -12,6 +12,7 @@ import example.configuration.HelloAppConfiguration;
 import example.health.TemplateHealthCheck;
 import example.resource.HelloResource;
 import example.websocket.chat.ChatWebSocket;
+import example.websocket.echo.EchoWebSocket;
 
 public class HelloAppApplication extends Application<HelloAppConfiguration> {
 
@@ -52,7 +53,7 @@ public class HelloAppApplication extends Application<HelloAppConfiguration> {
 
             @Override
             public void configure(WebSocketServletFactory factory) {
-                factory.register(ChatWebSocket.class);
+                factory.register(EchoWebSocket.class);
             }
         });
     }
