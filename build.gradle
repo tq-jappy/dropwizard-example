@@ -2,11 +2,11 @@ apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'eclipse'
 
-sourceCompatibility = 1.7
+sourceCompatibility = 1.8
 version = '0.0.1'
 
 def defaultEncoding = 'UTF-8'
-def jdkVersion = '1.7'
+def jdkVersion = '1.8'
 
 repositories { mavenCentral() }
 
