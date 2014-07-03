@@ -3,12 +3,14 @@ dropwizard-example
 
 An example of [Dropwizard](https://dropwizard.github.io/dropwizard/)
 
+- Java SE 8
 - Dropwizard 0.7.0
 - Gradle 2.0
 
 ## Preconditions
 
-None (Installing Gradle is not required)
+- Set the JAVA_HOME environment vailable to point the JDK8
+- Installing Gradle is not required
 
 ## Build
 
