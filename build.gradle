@@ -19,10 +19,10 @@ buildscript {
 apply plugin: 'executable-jar'
 
 dependencies {
-    compile 'io.dropwizard:dropwizard-core:0.7.0'
-    compile 'io.dropwizard:dropwizard-assets:0.7.0'
+    compile 'io.dropwizard:dropwizard-core:0.7.1'
+    compile 'io.dropwizard:dropwizard-assets:0.7.1'
     compile 'org.eclipse.jetty.websocket:websocket-server:9.0.7.v20131107'
-    testCompile 'org.codehaus.groovy:groovy-all:2.2.2'
+    testCompile 'org.codehaus.groovy:groovy-all:2.3.2'
     testCompile 'junit:junit:4.11'
 }
 
