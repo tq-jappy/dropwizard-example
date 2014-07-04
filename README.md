@@ -4,7 +4,7 @@ dropwizard-example
 An example of [Dropwizard](https://dropwizard.github.io/dropwizard/)
 
 - Java SE 8
-- Dropwizard 0.7.0
+- Dropwizard 0.7.1
 - Gradle 2.0
 
 ## Preconditions
@@ -15,7 +15,7 @@ An example of [Dropwizard](https://dropwizard.github.io/dropwizard/)
 ## Build
 
 ```
-./gradlew jar
+./gradlew build
 ```
 
 ## test
@@ -27,7 +27,7 @@ An example of [Dropwizard](https://dropwizard.github.io/dropwizard/)
 ## Run server
 
 ```
-java -jar build/libs/dropwizard-example-{version}.jar server setting/example.yml
+java -jar build/libs/dropwizard-example-{version}-standalone.jar server setting/example.yml
 ```
 
 ### Access to
